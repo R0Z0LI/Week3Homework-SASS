@@ -5,22 +5,22 @@
         <meta charset="UTF-8" />
         <title>Contact Form 04</title>
         <link rel="stylesheet"
-              href="css/form.css" />
+            href="./css/main.css" />
         <link rel="stylesheet"
-              href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+            href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
         <meta name="viewport"
-              content="width=device-width,initial-scale=1" />
+            content="width=device-width,initial-scale=1" />
     </head>
 
     <body>
-        <section class="ftco-section">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-6 text-center mb-5">
-                        <h2 class="heading-section">Contact Form #04</h2>
+        <section class="form"> <!-- ftco-section -->
+            <div class="container"> <!-- container -->
+                <div class="container__section"> <!-- row justify-content-center -->
+                    <div class="head-container">
+                        <h2 class="heading-container__text">Contact Form #04</h2>
                     </div>
                 </div>
-                <div class="row justify-content-center">
+                <div class="container__section "> <!-- row justify-content-center -->
                     <div class="col-md-10">
                         <div class="wrapper">
                             <div class="row no-gutters">
@@ -28,24 +28,24 @@
                                     <div class="contact-wrap w-100 p-lg-5 p-4">
                                         <h3 class="mb-4">Send us a message</h3>
                                         <div id="form-message-warning"
-                                             class="mb-4"></div>
+                                            class="mb-4"></div>
                                         <div id="form-message-succes"
-                                             class="mb-4">
+                                            class="mb-4">
                                             Your message was sent, thank you!
                                         </div>
                                         <form method="POST"
-                                              id="contactForm"
-                                              name="contactForm"
-                                              class="contactForm"
-                                              novalidate="novalidate">
+                                            id="contactForm"
+                                            name="contactForm"
+                                            class="contactForm"
+                                            novalidate="novalidate">
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="form-group">
                                                         <input type="text"
-                                                               class="form-control"
-                                                               id="name"
-                                                               name="name"
-                                                               placeholder="Name" />
+                                                            class="form-control"
+                                                            id="name"
+                                                            name="name"
+                                                            placeholder="Name" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -53,10 +53,10 @@
                                                 <div class="col-md-12">
                                                     <div class="form-group">
                                                         <input type="email"
-                                                               class="form-control"
-                                                               id="email"
-                                                               name="email"
-                                                               placeholder="Email" />
+                                                            class="form-control"
+                                                            id="email"
+                                                            name="email"
+                                                            placeholder="Email" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -64,10 +64,10 @@
                                                 <div class="col-md-12">
                                                     <div class="form-group">
                                                         <input type="text"
-                                                               class="form-control"
-                                                               id="subject"
-                                                               name="subject"
-                                                               placeholder="Subject" />
+                                                            class="form-control"
+                                                            id="subject"
+                                                            name="subject"
+                                                            placeholder="Subject" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -75,11 +75,11 @@
                                                 <div class="col-md-12">
                                                     <div class="form-group">
                                                         <textarea name="message"
-                                                                  class="form-control"
-                                                                  id="message"
-                                                                  cols="30"
-                                                                  rows="6"
-                                                                  placeholder="Message"></textarea>
+                                                            class="form-control"
+                                                            id="message"
+                                                            cols="30"
+                                                            rows="6"
+                                                            placeholder="Message"></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -87,8 +87,8 @@
                                                 <div class="col-md-12">
                                                     <div class="form-group">
                                                         <input type="submit"
-                                                               value="Send Message"
-                                                               class="btn btn-primary" />
+                                                            value="Send Message"
+                                                            class="btn btn-primary" />
                                                         <div class="submitting"></div>
                                                     </div>
                                                 </div>

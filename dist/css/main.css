@@ -1,1 +1,77 @@
-/*# sourceMappingURL=main.css.map */
+html {
+  box-sizing: border-box;
+  line-height: 1.15;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", "Arial", sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  font-weight: normal;
+  background: #fafafa;
+  background-color: #fff;
+  color: #666666;
+  text-align: left;
+}
+
+h2 {
+  line-height: 1.5;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.form {
+  padding: 7rem 0;
+}
+
+.container {
+  width: 100%;
+  padding-right: 0.9375rem;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+.container__section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.head-container {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.heading-container__text {
+  font-size: 1.75rem;
+  color: #000;
+}/*# sourceMappingURL=main.css.map */
