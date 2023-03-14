@@ -4,6 +4,21 @@ $background-shade-start: #7f279c;
 $background-shade-end: #2e279d;
 $button-color: #d62196;
 $text-color: #fff;
+$padding: 15px;
+
+@mixin setPosition {
+  position: relative;
+  width: 100%;
+  padding-right: $padding;
+  padding-left: $padding;
+}
+
+@mixin header {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
 
 html {
   line-height: 1.15;
@@ -44,7 +59,7 @@ h3 {
 .container {
   width: 100%;
   padding-right: 0.9375rem;
-  padding-left: 15px;
+  padding-left: $padding;
   margin-right: auto;
   margin-left: auto;
 
@@ -64,24 +79,20 @@ h3 {
     max-width: 1140px;
   }
 }
-.container__section {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
-  @media (min-width: 768px) {
-    flex: 0 0 83.33333%;
-    max-width: 83.33333%;
-  }
+.container__header {
+  @include header;
+  justify-content: center;
+}
+
+.container__main {
+  @include header;
+  justify-content: center;
 }
 .align {
   justify-content: center;
 }
 .head-container {
-  position: relative;
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  @include setPosition;
   margin-bottom: 3rem;
   text-align: center;
 
@@ -121,31 +132,37 @@ h3 {
 .wrapper {
   position: relative;
   width: 100%;
-  margin-right: 15px;
-  margin-left: 15px;
+  margin-right: $padding;
+  margin-left: $padding;
   box-shadow: 0px 21px 41px -13px rgb(0 0 0 / 18%);
 }
 
 .no-gutters {
+  display: flex;
+  flex: wrap;
   margin-right: 0;
   margin-left: 0;
 
-  > .wrapper__section {
+  > .wrapper__form {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  > .wrapper__contact {
     padding-left: 0;
     padding-right: 0;
   }
 }
 
-.wrapper__section {
-  position: relative;
-  width: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
+.wrapper__form {
+  @include setPosition;
 
   @media (min-width: 768px) {
     flex: 0 0 50%;
     max-width: 50%;
   }
+}
+.wrapper__contact {
+  @include setPosition;
 }
 .form-group {
   margin-bottom: 1rem;
@@ -154,10 +171,7 @@ h3 {
   margin-bottom: 1.5rem;
 }
 .form__field {
-  position: relative;
-  width: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
+  @include setPosition;
 
   @media (min-width: 768px) {
     flex: 0 0 100%;
