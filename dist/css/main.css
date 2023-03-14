@@ -167,6 +167,82 @@ h3 {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
+  display: flex;
+}
+@media (min-width: 768px) {
+  .wrapper__contact {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+.wrapper__contact .address {
+  margin-bottom: 25px;
+}
+.wrapper__contact .address .address__text {
+  width: calc(100% - 50px);
+}
+.wrapper__contact .address .address__icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+.wrapper__contact .address .address__icon span {
+  font-size: 1.25rem;
+  color: #000;
+}
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  text-rendering: auto;
+}
+
+.address {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.address__icon {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.address__text {
+  padding-left: 1rem;
+}
+
+.contact {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 1.5rem;
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .contact {
+    padding: 3rem;
+  }
+}
+.contact h3 {
+  color: #000;
+  position: relative;
+}
+.contact h3:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: #d62196;
+  content: "";
+}
+
+.contact__paragraph {
+  margin-bottom: 1.5rem;
+  margin-top: 0;
 }
 
 .form-group {
