@@ -88,8 +88,8 @@ h3 {
 .container__section__shared-style {
   display: flex;
   flex-wrap: wrap;
-  margin-right: calc(0 - $offset);
-  margin-left: calc(0 - $offset);
+  margin-right: calc(0px - $offset);
+  margin-left: calc(0px - $offset);
 }
 .container__section {
   justify-content: center;
@@ -310,6 +310,9 @@ h3 {
     border-color: $button-color;
     color: $primary-background-color;
   }
+}
+[type="submit"]:not(:disabled) {
+  cursor: pointer;
 }
 
 textarea {

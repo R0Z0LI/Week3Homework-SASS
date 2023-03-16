@@ -319,6 +319,10 @@ h3 {
   color: #fafafa;
 }
 
+[type=submit]:not(:disabled) {
+  cursor: pointer;
+}
+
 textarea.field__text {
   height: inherit;
 }
