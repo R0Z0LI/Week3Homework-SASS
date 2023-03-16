@@ -94,7 +94,7 @@ h3 {
 .align {
   justify-content: center;
 }
-.head-container {
+.header {
   @include setPosition;
   margin-bottom: 3rem;
   text-align: center;
@@ -104,7 +104,7 @@ h3 {
     max-width: 50%;
   }
 }
-.heading-container__text {
+.header__text {
   font-size: 1.75rem;
   color: $secondary-background-color;
 }
@@ -132,7 +132,7 @@ h3 {
   display: none;
 }
 
-.wrapper {
+.main {
   position: relative;
   width: 100%;
   padding-right: $padding;
@@ -144,7 +144,7 @@ h3 {
   }
 }
 
-.no-gutters {
+.main__wrapper {
   display: flex;
   flex-wrap: wrap;
   margin-right: 0;
@@ -269,7 +269,7 @@ h3 {
   margin-top: 0;
 }
 
-.form-group {
+.field__area {
   margin-bottom: 1rem;
 }
 .form__text {
@@ -312,12 +312,12 @@ h3 {
 }
 
 textarea {
-  &.form-control {
+  &.field__text {
     height: inherit;
   }
 }
 
-.form-control {
+.field__text {
   &::placeholder {
     color: rgba(255, 255, 255, 0.5);
   }
@@ -345,7 +345,7 @@ textarea {
 }
 
 .form__content {
-  .form-control {
+  .field__text {
     border: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     padding: 0;

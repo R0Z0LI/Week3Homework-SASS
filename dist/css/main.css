@@ -92,7 +92,7 @@ h3 {
   justify-content: center;
 }
 
-.head-container {
+.header {
   position: relative;
   width: 100%;
   padding-right: 15px;
@@ -101,13 +101,13 @@ h3 {
   text-align: center;
 }
 @media (min-width: 768px) {
-  .head-container {
+  .header {
     flex: 0 0 50%;
     max-width: 50%;
   }
 }
 
-.heading-container__text {
+.header__text {
   font-size: 1.75rem;
   color: #000;
 }
@@ -131,31 +131,31 @@ h3 {
   display: none;
 }
 
-.wrapper {
+.main {
   position: relative;
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
 }
 @media (min-width: 768px) {
-  .wrapper {
+  .main {
     flex: 0 0 83.33333%;
     max-width: 83.33333%;
   }
 }
 
-.no-gutters {
+.main__wrapper {
   display: flex;
   flex-wrap: wrap;
   margin-right: 0;
   margin-left: 0;
   box-shadow: 0px 21px 41px -13px rgba(0, 0, 0, 0.18);
 }
-.no-gutters > .wrapper__form {
+.main__wrapper > .wrapper__form {
   padding-left: 0;
   padding-right: 0;
 }
-.no-gutters > .wrapper__contact {
+.main__wrapper > .wrapper__contact {
   padding-left: 0;
   padding-right: 0;
 }
@@ -276,7 +276,7 @@ h3 {
   margin-top: 0;
 }
 
-.form-group {
+.field__area {
   margin-bottom: 1rem;
 }
 
@@ -325,11 +325,11 @@ h3 {
   color: #fafafa;
 }
 
-textarea.form-control {
+textarea.field__text {
   height: inherit;
 }
 
-.form-control {
+.field__text {
   height: 52px;
   background: transparent;
   color: rgba(255, 255, 255, 0.8);
@@ -342,10 +342,10 @@ textarea.form-control {
   outline: none;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
-.form-control::-moz-placeholder {
+.field__text::-moz-placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
-.form-control::placeholder {
+.field__text::placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
 
@@ -361,7 +361,7 @@ textarea {
   font-family: inherit;
 }
 
-.form__content .form-control {
+.form__content .field__text {
   border: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   padding: 0;
