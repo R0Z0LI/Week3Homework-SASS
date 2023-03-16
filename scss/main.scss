@@ -1,16 +1,21 @@
 $primary-background-color: #fafafa;
-$secondary-background-color: #000;
+$secondary-background-color: #fff;
 $background-shade-start: #7f279c;
 $background-shade-end: #2e279d;
 $button-color: #d62196;
-$text-color: #fff;
-$padding: 15px;
+$primary-text-color: #000;
+$secondary-text-color: #666666;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xlg: 1200px;
+$offset: 15px;
 
 @mixin setPosition {
   position: relative;
   width: 100%;
-  padding-right: $padding;
-  padding-left: $padding;
+  padding-right: $offset;
+  padding-left: $offset;
 }
 
 html {
@@ -38,9 +43,7 @@ body {
   font-size: 1rem;
   line-height: 1.8;
   font-weight: normal;
-  background: #fafafa;
-  background-color: #fff;
-  color: #666666;
+  color: $secondary-text-color;
   text-align: left;
 }
 h2 {
@@ -62,51 +65,49 @@ h3 {
 .container {
   width: 100%;
   padding-right: 0.9375rem;
-  padding-left: $padding;
+  padding-left: $offset;
   margin-right: auto;
   margin-left: auto;
 
-  @media (min-width: 576px) {
+  @media (min-width: $sm) {
     max-width: 540px;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $md) {
     max-width: 720px;
   }
 
-  @media (min-width: 992px) {
+  @media (min-width: $lg) {
     max-width: 960px;
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: $xlg) {
     max-width: 1140px;
   }
 }
 .container__section__shared-style {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
+  margin-right: calc(0 - $offset);
+  margin-left: calc(0 - $offset);
 }
 .container__section {
   justify-content: center;
 }
-.align {
-  justify-content: center;
-}
+
 .header {
   @include setPosition;
   margin-bottom: 3rem;
   text-align: center;
 
-  @media (min-width: 768px) {
+  @media (min-width: $md) {
     flex: 0 0 50%;
     max-width: 50%;
   }
 }
 .header__text {
   font-size: 1.75rem;
-  color: $secondary-background-color;
+  color: $primary-text-color;
 }
 
 .form {
@@ -118,7 +119,7 @@ h3 {
     $background-shade-end 100%
   );
 
-  @media (min-width: 992px) {
+  @media (min-width: $lg) {
     padding: 3rem;
   }
 
@@ -135,10 +136,10 @@ h3 {
 .main {
   position: relative;
   width: 100%;
-  padding-right: $padding;
-  padding-left: $padding;
+  padding-right: $offset;
+  padding-left: $offset;
 
-  @media (min-width: 768px) {
+  @media (min-width: $md) {
     flex: 0 0 83.33333%;
     max-width: 83.33333%;
   }
@@ -164,7 +165,7 @@ h3 {
 .wrapper__form {
   @include setPosition;
 
-  @media (min-width: 768px) {
+  @media (min-width: $md) {
     flex: 0 0 50%;
     max-width: 50%;
   }
@@ -173,7 +174,7 @@ h3 {
   @include setPosition;
   display: flex;
 
-  @media (min-width: 768px) {
+  @media (min-width: $md) {
     flex: 0 0 50%;
     max-width: 50%;
   }
@@ -189,7 +190,7 @@ h3 {
 
         span {
           font-weight: 400;
-          color: $secondary-background-color;
+          color: $primary-text-color;
         }
 
         a {
@@ -205,7 +206,7 @@ h3 {
       border: 1px solid rgba(0, 0, 0, 0.05);
       span {
         font-size: 1.25rem;
-        color: $secondary-background-color;
+        color: $primary-text-color;
       }
     }
   }
@@ -245,7 +246,7 @@ h3 {
   background-position: center;
   padding: 1.5rem;
   width: 100%;
-  @media (min-width: 992px) {
+  @media (min-width: $lg) {
     padding: 3rem;
   }
 
@@ -278,7 +279,7 @@ h3 {
 .form__field {
   @include setPosition;
 
-  @media (min-width: 768px) {
+  @media (min-width: $md) {
     flex: 0 0 100%;
     max-width: 100%;
   }
