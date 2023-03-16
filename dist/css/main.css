@@ -2,6 +2,12 @@ html {
   line-height: 1.15;
 }
 
+a {
+  transition: 0.3s all ease;
+  text-decoration: none;
+  background-color: transparent;
+}
+
 form {
   margin-top: 0rem;
 }
@@ -71,19 +77,14 @@ h3 {
   }
 }
 
-.container__header {
+.container__section__shared-style {
   display: flex;
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
-  justify-content: center;
 }
 
-.container__main {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
+.container__section {
   justify-content: center;
 }
 
@@ -195,6 +196,10 @@ h3 {
   margin-top: 0;
   margin-bottom: 0;
 }
+.wrapper__contact .contact__paragraph .paragraph__text p span {
+  font-weight: 400;
+  color: #000;
+}
 .wrapper__contact .contact__paragraph .paragraph__text p a {
   color: rgba(0, 0, 0, 0.3);
 }
@@ -207,6 +212,9 @@ h3 {
 .wrapper__contact .contact__paragraph .paragraph__icon span {
   font-size: 1.25rem;
   color: #000;
+}
+.wrapper__contact .contact__paragraph:last-child {
+  margin-bottom: 0;
 }
 
 .fa {
@@ -263,7 +271,7 @@ h3 {
   content: "";
 }
 
-.contact__paragraph {
+.contact__info {
   margin-bottom: 1.5rem;
   margin-top: 0;
 }
@@ -333,6 +341,12 @@ textarea.form-control {
   line-height: 1.5;
   outline: none;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.form-control::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 button,

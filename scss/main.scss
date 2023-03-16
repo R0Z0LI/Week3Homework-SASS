@@ -13,15 +13,14 @@ $padding: 15px;
   padding-left: $padding;
 }
 
-@mixin header {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
-}
-
 html {
   line-height: 1.15;
+}
+
+a {
+  transition: 0.3s all ease;
+  text-decoration: none;
+  background-color: transparent;
 }
 
 form {
@@ -83,19 +82,13 @@ h3 {
     max-width: 1140px;
   }
 }
-.container__header {
+.container__section__shared-style {
   display: flex;
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
-  justify-content: center;
 }
-
-.container__main {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
+.container__section {
   justify-content: center;
 }
 .align {
@@ -193,6 +186,12 @@ h3 {
       p {
         margin-top: 0;
         margin-bottom: 0;
+
+        span {
+          font-weight: 400;
+          color: $secondary-background-color;
+        }
+
         a {
           color: rgba(0, 0, 0, 0.3);
         }
@@ -209,6 +208,9 @@ h3 {
         color: $secondary-background-color;
       }
     }
+  }
+  .contact__paragraph:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -262,7 +264,7 @@ h3 {
     content: "";
   }
 }
-.contact__paragraph {
+.contact__info {
   margin-bottom: 1.5rem;
   margin-top: 0;
 }
@@ -316,6 +318,9 @@ textarea {
 }
 
 .form-control {
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
   height: 52px;
   background: transparent;
   color: rgba(255, 255, 255, 0.8);
