@@ -2,14 +2,10 @@ html {
   line-height: 1.15;
 }
 
-a {
+.link {
   transition: 0.3s all ease;
   text-decoration: none;
   background-color: transparent;
-}
-
-form {
-  margin-top: 0rem;
 }
 
 *,
@@ -18,7 +14,7 @@ form {
   box-sizing: border-box;
 }
 
-body {
+.body {
   margin: 0;
   font-family: "Poppins", "Arial", sans-serif;
   font-size: 1rem;
@@ -26,24 +22,6 @@ body {
   font-weight: normal;
   color: #666666;
   text-align: left;
-}
-
-h2 {
-  line-height: 1.5;
-  font-weight: 400;
-  margin-bottom: 0.5rem;
-  margin-top: 0;
-}
-
-h3 {
-  line-height: 1.5;
-  font-weight: 400;
-  font-size: 1.75rem;
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-}
-
-.body {
   padding: 7rem 0;
 }
 
@@ -102,6 +80,10 @@ h3 {
 }
 
 .header__text {
+  line-height: 1.5;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
   font-size: 1.75rem;
   color: #000;
 }
@@ -116,7 +98,7 @@ h3 {
     padding: 3rem;
   }
 }
-.form h3 {
+.form .form__text {
   color: #fafafa;
 }
 
@@ -186,15 +168,15 @@ h3 {
 .wrapper__contact .contact__paragraph .paragraph__text {
   width: calc(100% - 50px);
 }
-.wrapper__contact .contact__paragraph .paragraph__text p {
+.wrapper__contact .contact__paragraph .paragraph__text .text__container {
   margin-top: 0;
   margin-bottom: 0;
 }
-.wrapper__contact .contact__paragraph .paragraph__text p span {
+.wrapper__contact .contact__paragraph .paragraph__text .text__container .text__span {
   font-weight: 400;
   color: #000;
 }
-.wrapper__contact .contact__paragraph .paragraph__text p a {
+.wrapper__contact .contact__paragraph .paragraph__text .text__container .link {
   color: rgba(0, 0, 0, 0.3);
 }
 .wrapper__contact .contact__paragraph .paragraph__icon {
@@ -203,7 +185,7 @@ h3 {
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
-.wrapper__contact .contact__paragraph .paragraph__icon span {
+.wrapper__contact .contact__paragraph .paragraph__icon .icon__span {
   font-size: 1.25rem;
   color: #000;
 }
@@ -251,11 +233,11 @@ h3 {
     padding: 3rem;
   }
 }
-.contact h3 {
+.contact .form__text {
   color: #000;
   position: relative;
 }
-.contact h3:after {
+.contact .form__text:after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -275,6 +257,14 @@ h3 {
 }
 
 .form__text {
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 1.75rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.form__text-margin {
   margin-bottom: 1.5rem;
 }
 
@@ -291,7 +281,7 @@ h3 {
   }
 }
 
-#message {
+.message {
   resize: vertical;
 }
 
@@ -323,11 +313,16 @@ h3 {
   cursor: pointer;
 }
 
-textarea.field__text {
+.textarea {
+  font-family: inherit;
+}
+.textarea .field__text {
   height: inherit;
 }
 
 .field__text {
+  overflow: visible;
+  font-family: inherit;
   height: 52px;
   background: transparent;
   color: rgba(255, 255, 255, 0.8);
@@ -347,18 +342,9 @@ textarea.field__text {
   color: rgba(255, 255, 255, 0.5);
 }
 
-button,
-input {
-  overflow: visible;
+.form__content {
+  margin-top: 0rem;
 }
-
-input,
-button,
-textarea {
-  margin: 0;
-  font-family: inherit;
-}
-
 .form__content .field__text {
   border: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
